@@ -1,0 +1,31 @@
+// user-variables.scss
+// Use this to overwrite Bootstrap and Front variables
+//
+
+
+// Example of a variable override to change Front's primary color and font size
+// Remove the "//" to comment it in and see it in action!
+$red: #8a0e0e !default;
+$primary: $red;
+$header-navbar-brand-width: 2.3rem;
+$primary-darker: darken($red, 20%);
+$primary-lighter: lighten($red, 20%);
+$red-lighter: $primary-lighter;
+$red-darker: $primary-darker;
+
+$success: #0ac461;
+
+$secondary: #6eb0b9;
+
+// $font-size-base: .875rem;
+
+// Front's primary color has lighter as well as darker color versions,
+// and they also need to be changed upon changing the primary color to a different hex code - otherwise the color of some blocks might look not professional.
+// Here is a list of colors that associate these changes:
+//                                            $red-lighter;
+// $info:                                                        $red-lighter;
+
+
+// The color of the SVG loader should be modified manually.
+// See assets/svg/preloaders/circle-preloader.svg
+
