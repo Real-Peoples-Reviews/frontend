@@ -1,0 +1,49 @@
+@use '../base/vars' as v;
+
+.form {
+	&__container {
+		display: flex;
+		flex-direction: column;
+
+		& + & {
+			margin-top: v.$M;
+		}
+	}
+
+	&__btn {
+		background-color: v.$btnColor;
+		color: v.$mintCream;
+		transition: v.$transition;
+		font-size: v.$S;
+		padding: v.$XS v.$XS;
+		margin-top: v.$S;
+
+		&:hover {
+			background-color: v.$mintCream;
+			color: v.$btnColor;
+			outline: v.$btnColor solid 1px;
+		}
+	}
+
+	&__header {
+		font-size: v.$M;
+		font-weight: bold;
+		margin-bottom: v.$S;
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		font-size: v.$S;
+
+		&__input {
+			border-bottom: 1px solid v.$textColor;
+			margin-bottom: v.$XS;
+		}
+	}
+
+	&__section {
+		display: flex;
+		flex-direction: column;
+	}
+}

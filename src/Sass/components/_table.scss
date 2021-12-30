@@ -1,0 +1,272 @@
+@use '../base/vars' as v;
+
+// TODO: refactor this
+.table--booking {
+	background: #fafafa;
+	border: 0.1rem solid #cecece;
+	border-collapse: collapse !important;
+	border-spacing: 0 0 !important;
+	-webkit-box-shadow: 0px 2px 5px 0px #cecece;
+	box-shadow: 0px 2px 5px 0px #cecece;
+	margin: 0 auto;
+	padding: 0;
+	width: 34rem;
+}
+.table--booking td {
+	text-align: center;
+}
+.table--booking th {
+	border: 0.1rem solid #cecece;
+}
+.table--booking--split {
+	background: #fafafa;
+	border: none;
+	border-collapse: collapse !important;
+	border-spacing: 0 0 !important;
+	margin: 0 auto;
+	padding: 0;
+}
+.table--booking--split td {
+	text-align: center;
+}
+.table--booking--split th {
+	border: 0.1rem solid #cecece;
+}
+.table--booking--split .table__cell {
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-left-width: 0;
+}
+.table--booking--split .table__cell span:first-child {
+	border-right: 0.1rem solid #adadad;
+}
+.table--booking--split .table__cell span:last-child {
+	border-left: 0.1rem solid #cecece;
+}
+.table__row--full {
+	height: 6rem;
+	padding: 2rem 0;
+	border: 0.1rem solid #cecece;
+}
+.table__row--full td {
+	border: 0.1rem solid #cecece;
+}
+.table--nested {
+	border-collapse: collapse !important;
+	border-spacing: 0 0 !important;
+	width: 100%;
+}
+.table--nested tr {
+	padding: 0;
+	margin: 0;
+}
+.table__cell--subcell {
+	height: 2.9rem;
+	padding: 0;
+	line-height: 0;
+	border-bottom-width: 0;
+	border-top-width: 0;
+}
+.table__row--border-top {
+	border-top: 0.1rem solid #cecece;
+}
+.table__row--border-bottom {
+	border-bottom: 0.1rem solid #cecece;
+}
+.table__row--no-border td {
+	border: none;
+	padding: 0;
+}
+.table {
+	background: #fafafa;
+	border: 0.1rem solid #cecece;
+	border-collapse: collapse !important;
+	border-spacing: 0 0 !important;
+	color: #1c1c1c;
+	-webkit-box-shadow: 0px 2px 5px 0px #cecece;
+	box-shadow: 0px 2px 5px 0px #cecece;
+	margin: 1rem;
+	padding: 0;
+	width: 100%;
+}
+.table__body tr:first-child {
+	border-top: none;
+}
+.table__cell {
+	padding: 0;
+}
+.table__cell--align-left {
+	text-align: left;
+}
+.table__cell--level {
+	font-size: 2.2rem;
+}
+.table__cell--width {
+	width: 12rem;
+}
+.table__row:hover {
+	background: #f4f4f4;
+	border: 0.1rem solid #cecece;
+	-webkit-box-shadow: 2px 2px 5px 0px #cecece;
+	box-shadow: 2px 2px 5px 0px #cecece;
+}
+.table__row td {
+	border: 0.1rem solid #cecece;
+}
+.table__row th {
+	border: 1px solid #cecece;
+	padding: 1rem;
+}
+.table__row--header {
+	background: #cecece;
+	margin: 0 auto;
+	padding: 0;
+}
+.table__row--header:hover {
+	background: #cecece;
+}
+.table__row--subheader {
+	background: #f4f4f4;
+}
+.table__row--subheader:hover {
+	-webkit-box-shadow: unset;
+	box-shadow: unset;
+}
+.table__data--asset {
+	font-family: 'proxima-nova', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 400;
+	line-height: 1;
+	padding: 0;
+	text-align: left;
+}
+.table__link {
+	color: #1c1c1c;
+	padding: 0;
+}
+.table__link:hover {
+	border-bottom: 0.2rem solid #1c1c1c;
+	color: #1c1c1c;
+}
+.table__cell--booked {
+	cursor: pointer;
+	display: block;
+	padding: 2.8rem 0;
+	width: 100%;
+}
+.table td {
+	width: 3rem;
+	height: 3rem;
+}
+.table .table__row th {
+	height: 6rem;
+}
+.table .table__row--subheader th {
+	height: 4rem;
+}
+.table__cell--business-unit-1 {
+	background: #70d6ff;
+	padding: 3rem 0;
+	cursor: pointer;
+}
+.table__cell--business-unit-1.table__cell--first-half-hour {
+	background: #70d6ff;
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-1.table__cell--second-half-hour {
+	background: #70d6ff;
+	cursor: pointer;
+	display: block;
+	float: right;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-2 {
+	background: #ffd670;
+	padding: 3rem 0;
+	cursor: pointer;
+}
+.table__cell--business-unit-2.table__cell--first-half-hour {
+	background: #ffd670;
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-2.table__cell--second-half-hour {
+	background: #ffd670;
+	cursor: pointer;
+	display: block;
+	float: right;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-3 {
+	background: #ef709d;
+	padding: 3rem 0;
+	cursor: pointer;
+}
+.table__cell--business-unit-3.table__cell--first-half-hour {
+	background: #ef709d;
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-3.table__cell--second-half-hour {
+	background: #ef709d;
+	cursor: pointer;
+	display: block;
+	float: right;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-4 {
+	background: #dabfff;
+	border-top: 1rem solid #dabfff;
+	cursor: pointer;
+}
+.table__cell--business-unit-4.table__cell--first-half-hour {
+	background: #dabfff;
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-4.table__cell--second-half-hour {
+	background: #dabfff;
+	cursor: pointer;
+	display: block;
+	float: right;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-5 {
+	background: #85ffc7;
+	border-top: 1rem solid #85ffc7;
+	cursor: pointer;
+}
+.table__cell--business-unit-5.table__cell--first-half-hour {
+	background: #85ffc7;
+	cursor: pointer;
+	display: block;
+	float: left;
+	padding: 3rem 0;
+	width: 50%;
+}
+.table__cell--business-unit-5.table__cell--second-half-hour {
+	background: #85ffc7;
+	cursor: pointer;
+	display: block;
+	float: right;
+	padding: 3rem 0;
+	width: 50%;
+}
