@@ -7,25 +7,21 @@ import Dashboard from "./components/pages/Dashboard";
 import Home from "./components/pages/Home";
 
 
-const StyledBody = styled.div``;
+
 
 function App() {
   return (
-    <div className="App">
-      <StyledBody className="App">
+      <div className="App">
         <Routes> 
           <Route path='/' element={<Home/>} />
-          <Route
-						path='/dashboard'
-						element={
+          <Route path='/dashboard'element={
 							<PrivateRoute>
 								<Dashboard />
 							</PrivateRoute>
 						}
 					/>
         </Routes>
-      </StyledBody>
-    </div>
+      </div>
   );
 }
 
