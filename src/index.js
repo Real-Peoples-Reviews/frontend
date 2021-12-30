@@ -9,7 +9,7 @@ import thunk from "redux-thunk";
 import logger from 'redux-logger'
 import { BrowserRouter as Router } from "react-router-dom";
 
-import { rootReducer } from "./Reducers";
+import { rootReducer } from "./state/Reducers";
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 console.log("STORE", store.getState());
