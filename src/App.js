@@ -11,7 +11,6 @@ const StyledBody = styled.div``;
 
 function App() {
   return (
-
     <div className="App">
       <StyledBody className="App">
         <Routes> 
