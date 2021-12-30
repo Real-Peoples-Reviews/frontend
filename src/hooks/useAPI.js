@@ -1,9 +1,7 @@
-//ATTENTION - this component collects a base information to feed into axiosWithAuth
+//ATTENTION - this component collects base information to feed into axiosWithAuth
 import { axiosWithAuth } from '../../utils/axiosWithAuth';
 
 export const useAPI = config => {
-  // const [dataAPI, setData] = useState('');
-  // const [error, setError] = useState('');
   const { method, url, data } = config;
 
   const moveData = () => {
@@ -17,6 +15,7 @@ export const useAPI = config => {
         return err;
       });
   };
+  // To better understand the use of this hook see this...
   // console.log('Here is useApi.js dataAPI', dataAPI)
   return [ moveData];
 };
