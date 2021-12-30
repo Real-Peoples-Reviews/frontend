@@ -9,7 +9,7 @@ import Home from "./components/pages/Home";
 
 const StyledBody = styled.div``;
 
-function App() { localStorage.setItem ("token", "1245644")
+function App() {
   return (
 
     <div className="App">
