@@ -1,10 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { useForm } from "react-hook-form";
+import schema from "../../schemas/schema";
 
 const Login = () => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+		reset,
+	} = useForm({
+		resolver: yupResolver(schema),
+	});
+
+	const onHandleSubmission = (e) => {
+		console.log(e);
+		reset();
+	};
+
 	return (
 		<div className="container space-2">
-			<form>
+			<form onSubmit={handleSubmit(onHandleSubmission)}>
 				<div className="form-group">
 					<div className="heading">
 						<h2>
@@ -15,15 +32,17 @@ const Login = () => {
 					</div>
 					<label>
 						EMAIL ADDRESS
-						<input type="text" name="email" />
+						<input {...register("email")} placeholder="email" type="text" required />
 					</label>
 				</div>
 				<div className="form-group">
 					<label>
 						<span>PASSWORD</span>
 					</label>
-						<Link to='/'><span> Forgot your password? </span></Link>
-					<input type="password" name="password" />
+					<Link to="/">
+						<span> Forgot your password? </span>
+					</Link>
+					<input {...register("password")} placeholder="password" type="password" required />
 				</div>
 				<div className="form-group">
 					<div className="custom-checkbox">
