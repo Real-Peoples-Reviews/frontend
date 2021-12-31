@@ -66,7 +66,7 @@ export default function Footer() {
         <StyledFooter>
             <Line />
             <div className='footerLinks'>
-                <p>Copyright &copy; 2021 PP8</p>
+                <p>Copyright &copy; 2021</p>
                 <Link to='/team'>Meet the Team</Link>
             </div>
         </StyledFooter>
