@@ -6,7 +6,7 @@ function Dashboard() {
     return (
         <StyledDashboard>
         <div>
-            <p>HERE IS WHERE THE DASHBOARD CONTENT WILL GO including sign in/up </p>
+            <p>HERE IS WHERE THE DASHBOARD CONTENT WILL GO including sign in/up I think</p>
         </div>
         </StyledDashboard>
     )
