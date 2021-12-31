@@ -194,20 +194,20 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
               setLoggedIn(false);
             }}
           >
-            Potluck Planner{" "}
+            Real Peoples Reviews{" "}
           </h2>
         </Link>
 
         <div className="nav-links-container">
           {loggedIn ? (
             <NavLink
-              to="/upcomingevents"
+              to="/"
               activeStyle={{
                 fontWeight: "bold",
                 color: "var(--white)",
               }}
             >
-              Upcoming Events
+              Put Something Here and line 204
             </NavLink>
           ) : null}
 
@@ -263,14 +263,14 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
           {loggedIn ? (
             <NavLink
               onClick={toggleNav}
-              to="/upcomingevents"
+              to="/"
               activeStyle={{
                 backgroundColor: "var(--black)",
                 color: "var(--white)",
                 fontWeight: "bold",
               }}
             >
-              Upcoming Events
+              Put Something here and line 266
             </NavLink>
           ) : null}
 
