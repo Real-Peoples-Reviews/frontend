@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div>
             <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
-            <p>HERE IS HOME</p>
+            <p>HOME PAGE BEING UPDATED</p>
         </div>
     )
 }
