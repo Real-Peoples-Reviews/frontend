@@ -154,8 +154,6 @@ const Team = () => {
                     <h1>Meet the Team!</h1>
                 </div>
             </StyledHeader>
-
-            <div></div>
             <StyledCards className="cardsContainer">
                 <div className="card">
                     <img classNames="card-photo" src={rick} alt="Rick Mansfield" />
