@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
       -webkit-transition: 0.5s;
 
       &:hover {
-        color: var(--white);
+        color: var(--red);
         -webkit-transform-origin: 0% 100%;
       }
     }

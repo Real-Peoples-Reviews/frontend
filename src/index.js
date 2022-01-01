@@ -17,10 +17,10 @@ console.log("STORE", store.getState());
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <Provider store={store}>
-      <App />
+      <Provider store={store}>
+        <App />
       </Provider>
-      </Router>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
