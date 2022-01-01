@@ -10,6 +10,11 @@ We are working to convert RPR from PHP/Laravel to Javascript/React. If you are a
 - Old Github access if needed
 - Rick's Zoom room
 - if you are missing any of the above reach out to Rick
+- First Task... 
+  - create a trello card for you team profile 
+  - create a branch feature/teammate<yourname>
+  - add your details to the /team route
+  - create your first commit and push and PR (include a loom video)
 
 ## Conduct
 - We follow the Bloom Instatute of Technology use of Agile methodologies just like in thier labs. Hence...
