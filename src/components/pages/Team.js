@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Header from '../common/Header';
 import styled from "styled-components";
 import rick from "../../assets/images/TeamPics/RickMansfield.png";
 import chris from "../../assets/images/TeamPics/ChrisBoyle.PNG";
@@ -147,7 +148,11 @@ const StyledCards = styled.div`
 }
 `;
 const Team = () => {
+    let token = localStorage.getItem('token')
+    const [loggedIn, setLoggedIn] = useState(false);
     return (
+        <div>
+            <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
         <StyledTeam>
             <StyledHeader>
                 <div className="teamHeader">
@@ -156,13 +161,13 @@ const Team = () => {
             </StyledHeader>
             <StyledCards className="cardsContainer">
                 <div className="card">
-                    <img classNames="card-photo" src={rick} alt="Rick Mansfield" />
+                    <img className="card-photo" src={rick} alt="Rick Mansfield" />
                     <h2>Rick Mansfield</h2>
                     <p>Full Stack Developer</p>
                 </div>
 
                 <div className="card">
-                    <img classNames="card-photo" src={chris} alt="Jared Hall" />
+                    <img className="card-photo" src={chris} alt="Jared Hall" />
                     <h2>Chris Boyle</h2>
                     <p>Full Stack Developer</p>
                 </div>
@@ -179,7 +184,8 @@ const Team = () => {
                     <p>Full Stack Developer</p>
                 </div>
             </StyledCards>
-        </StyledTeam>
+            </StyledTeam>
+            </div>
     )
 }
 
