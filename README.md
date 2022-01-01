@@ -23,6 +23,9 @@ We are working to convert RPR from PHP/Laravel to Javascript/React. If you are a
 - [See 1 min Video here](https://realpeoplesreviews.com/) explains the product
 - Please sign up FREE using coupon code obtained from Rick
 
+## New live Project
+- [See new RPR WIP Project](https://frontend-rho-seven.vercel.app/)
+
 ## We Use React Router v6 
 - [Whats New in v6](https://ankitkarnak.hashnode.dev/whats-new-in-react-router-v6-an-introductory-guide)
 - [v6 Video in Depth](https://www.youtube.com/watch?v=0cSVuySEB0A)
