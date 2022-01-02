@@ -32,6 +32,7 @@ We are working to convert RPR from PHP/Laravel to Javascript/React. If you are a
 - [See new RPR WIP Project](https://frontend-rho-seven.vercel.app/)
 
 ## We Use React Router v6 
+- [Docs Home](https://reactrouter.com/docs/en/v6/getting-started/concepts)
 - [Whats New in v6](https://ankitkarnak.hashnode.dev/whats-new-in-react-router-v6-an-introductory-guide)
 - [v6 Video in Depth](https://www.youtube.com/watch?v=0cSVuySEB0A)
 - [All About new v6 Private Route](https://dev.to/iamandrewluca/private-route-in-react-router-v6-lg5)
