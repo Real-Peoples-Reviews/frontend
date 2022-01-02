@@ -202,7 +202,7 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
           {loggedIn ? (
             <NavLink
               to="/"
-              activeStyle={{
+              activestyle={{
                 fontWeight: "bold",
                 color: "var(--white)",
               }}
@@ -213,9 +213,9 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
 
           {loggedIn ? (
             <NavLink
-              exact
+              // exact
               to="/logout"
-              activeStyle={{
+              activestyle={{
                 fontWeight: "bold",
                 color: "var(--white)",
               }}
@@ -228,7 +228,7 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
           ) : (
             <NavLink
               to="/login"
-              activeStyle={{
+              activestyle={{
                 fontWeight: "bold",
                 color: "var(--white)",
               }}
@@ -240,7 +240,7 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
           {!loggedIn ? (
             <NavLink
               to="/signup"
-              activeStyle={{
+              activestyle={{
                 fontWeight: "bold",
                 color: "var(--white)",
                 border: "1px solid var(--white)",
@@ -264,7 +264,7 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
             <NavLink
               onClick={toggleNav}
               to="/"
-              activeStyle={{
+              activstyle={{
                 backgroundColor: "var(--black)",
                 color: "var(--white)",
                 fontWeight: "bold",
@@ -277,7 +277,7 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
           {loggedIn ? (
             <NavLink
               to="/"
-              activeStyle={{
+              activestyle={{
                 backgroundColor: "var(--black)",
                 color: "var(--white)",
                 fontWeight: "bold",
@@ -292,7 +292,7 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
           ) : (
             <NavLink
               to="/login"
-              activeStyle={{
+              activestyle={{
                 fontWeight: "bold",
                 color: "var(--white)",
               }}
@@ -304,7 +304,7 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
             <NavLink
               onClick={toggleNav}
               to="/signup"
-              activeStyle={{
+              activestyle={{
                 backgroundColor: "var(--black)",
                 color: "var(--white)",
                 fontWeight: "bold",
