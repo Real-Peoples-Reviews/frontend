@@ -4,6 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./utils/Private.js";
 import Dashboard from "./components/pages/Dashboard";
 import Home from "./components/pages/Home";
+import Login from './components/pages/Login';
+import Register from './components/pages/Register';
 import Team from "../src/components/pages/Team";
 import Logout from "./components/pages/Logout";
 
@@ -21,6 +23,8 @@ function App() {
           </PrivateRoute>
         }
         />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/register' element={<Register/>} />
       </Routes>
     </div>
   );
