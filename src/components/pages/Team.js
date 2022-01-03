@@ -1,89 +1,91 @@
-import React, { useState } from 'react'
-import Header from '../common/Header';
+import React, { useState } from "react";
+import Header from "../common/Header";
 import styled from "styled-components";
 import rick from "../../assets/images/TeamPics/RickMansfield.png";
 import chris from "../../assets/images/TeamPics/ChrisBoyle.PNG";
 import teresa from "../../assets/images/TeamPics/TeresaFranxman.PNG";
-import michael from "../../assets/images/TeamPics/MichaelHabermas.PNG"
+import michael from "../../assets/images/TeamPics/MichaelHabermas.PNG";
+import richard from "../../assets/images/TeamPics/RichardOh.png";
+
 const StyledTeam = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    @media (max-width: 550px) {
-        .cardsContainer {
-        .card {
-            img {
-            -webkit-filter: grayscale(0%);
+  @media (max-width: 550px) {
+    .cardsContainer {
+      .card {
+        img {
+          -webkit-filter: grayscale(0%);
 
-            &:hover {
-                filter: none;
-                transform: none;
-            }
-            }
+          &:hover {
+            filter: none;
+            transform: none;
+          }
         }
-        }
+      }
     }
+  }
 
-    @media (min-height: 700px) {
-        height: calc(100vh - 210px);
+  @media (min-height: 700px) {
+    height: calc(100vh - 210px);
+  }
+
+  @media (max-width: 2070px) {
+    .cardsContainer {
+      .card {
+        img {
+          height: 200px;
+          width: 200px;
+        }
+      }
     }
+  }
 
-    @media (max-width: 2070px) {
-        .cardsContainer {
-        .card {
-            img {
-            height: 200px;
-            width: 200px;
-            }
+  @media (max-width: 1330px) {
+    .cardsContainer {
+      .card {
+        h2 {
+          white-space: nowrap;
         }
+        img {
+          height: 100px;
+          width: 100px;
         }
+      }
     }
+  }
 
-    @media (max-width: 1330px) {
-        .cardsContainer {
-        .card {
-            h2 {
-            white-space: nowrap;
-            }
-            img {
-            height: 100px;
-            width: 100px;
-            }
-        }
-        }
-    }
+  @media (max-width: 550px) {
+    height: 100%;
 
-    @media (max-width: 550px) {
-        height: 100%;
+    .cardsContainer {
+      width: 100%;
 
-        .cardsContainer {
+      .card {
+        padding: 0;
+        margin: 0;
         width: 100%;
-
-        .card {
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            height: max-content;
-        }
-        }
+        height: max-content;
+      }
     }
+  }
 `;
 
 const StyledHeader = styled.div`
-    h1 {
-        font-size: 3rem;
-        line-height: 3.5rem;
-    }
-    .teamHeader {
-        text-align: center;
-        margin-top: 10%;
-        margin-bottom: 25%;
-        padding-bottom: 0.5%;
-        background-color: #FFFFF;
-        padding-top: 2%;
-    }
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  .teamHeader {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 25%;
+    padding-bottom: 0.5%;
+    background-color: #FFFFF;
+    padding-top: 2%;
+  }
 `;
 
 const StyledCards = styled.div`
@@ -148,45 +150,51 @@ const StyledCards = styled.div`
 }
 `;
 const Team = () => {
-    let token = localStorage.getItem('token')
-    const [loggedIn, setLoggedIn] = useState(false);
-    return (
-        <div>
-            <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
-        <StyledTeam>
-            <StyledHeader>
-                <div className="teamHeader">
-                    <h1>Meet the Team!</h1>
-                </div>
-            </StyledHeader>
-            <StyledCards className="cardsContainer">
-                <div className="card">
-                    <img className="card-photo" src={rick} alt="Rick Mansfield" />
-                    <h2>Rick Mansfield</h2>
-                    <p>Full Stack Developer</p>
-                </div>
+  let token = localStorage.getItem("token");
+  const [loggedIn, setLoggedIn] = useState(false);
+  return (
+    <div>
+      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
+      <StyledTeam>
+        <StyledHeader>
+          <div className="teamHeader">
+            <h1>Meet the Team!</h1>
+          </div>
+        </StyledHeader>
+        <StyledCards className="cardsContainer">
+          <div className="card">
+            <img className="card-photo" src={rick} alt="Rick Mansfield" />
+            <h2>Rick Mansfield</h2>
+            <p>Full Stack Developer</p>
+          </div>
 
-                <div className="card">
-                    <img className="card-photo" src={chris} alt="Jared Hall" />
-                    <h2>Chris Boyle</h2>
-                    <p>Full Stack Developer</p>
-                </div>
+          <div className="card">
+            <img className="card-photo" src={chris} alt="Jared Hall" />
+            <h2>Chris Boyle</h2>
+            <p>Full Stack Developer</p>
+          </div>
 
-                <div className="card">
-                    <img className="card-photo" src={teresa} alt="Teresa Franxman" />
-                    <h2>Teresa Franxman</h2>
-                    <p>Full Stack Developer</p>
-                </div>
+          <div className="card">
+            <img className="card-photo" src={teresa} alt="Teresa Franxman" />
+            <h2>Teresa Franxman</h2>
+            <p>Full Stack Developer</p>
+          </div>
 
-                <div className="card">
-                    <img className="card-photo" src={michael} alt="Michael Habermas" />
-                    <h2>Michael Habermas</h2>
-                    <p>Full Stack Developer</p>
-                </div>
-            </StyledCards>
-            </StyledTeam>
-            </div>
-    )
-}
+          <div className="card">
+            <img className="card-photo" src={michael} alt="Michael Habermas" />
+            <h2>Michael Habermas</h2>
+            <p>Full Stack Developer</p>
+          </div>
 
-export default Team
+          <div className="card">
+            <img className="card-photo" src={richard} alt="Richard Oh" />
+            <h2>Richard Oh</h2>
+            <p>Full Stack Developer</p>
+          </div>
+        </StyledCards>
+      </StyledTeam>
+    </div>
+  );
+};
+
+export default Team;
