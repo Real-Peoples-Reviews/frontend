@@ -2,7 +2,7 @@ import rick from "../assets/images/TeamPics/RickMansfield.png";
 import chris from "../assets/images/TeamPics/ChrisBoyle.PNG";
 import teresa from "../assets/images/TeamPics/TeresaFranxman.PNG";
 import michael from "../assets/images/TeamPics/MichaelHabermas.PNG";
-import richard from "../assets/images/TeamPics/RichardOh.PNG";
+import richard from "../assets/images/TeamPics/RichardOh.png";
 
 export const teamMembers = [
     {
