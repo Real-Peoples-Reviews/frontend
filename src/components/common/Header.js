@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
+import '../../css/index.css';
+import '../../css/App.css'
 
 
 const StyledHeader = styled.header`

@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
-import Header from '../common/Header';
+import React, { useState } from "react";
+import Header from "../common/Header";
 import styled from "styled-components";
-import rick from "../../assets/images/TeamPics/RickMansfield.png";
-import chris from "../../assets/images/TeamPics/ChrisBoyle.PNG";
-import teresa from "../../assets/images/TeamPics/TeresaFranxman.PNG";
-import michael from "../../assets/images/TeamPics/MichaelHabermas.PNG"
+import { teamMembers } from "../../data/team-members";
 const StyledTeam = styled.div`
     display: flex;
     flex-direction: column;
@@ -13,16 +10,16 @@ const StyledTeam = styled.div`
 
     @media (max-width: 550px) {
         .cardsContainer {
-        .card {
-            img {
-            -webkit-filter: grayscale(0%);
+            .card {
+                img {
+                    -webkit-filter: grayscale(0%);
 
-            &:hover {
-                filter: none;
-                transform: none;
+                    &:hover {
+                        filter: none;
+                        transform: none;
+                    }
+                }
             }
-            }
-        }
         }
     }
 
@@ -32,26 +29,26 @@ const StyledTeam = styled.div`
 
     @media (max-width: 2070px) {
         .cardsContainer {
-        .card {
-            img {
-            height: 200px;
-            width: 200px;
+            .card {
+                img {
+                    height: 200px;
+                    width: 200px;
+                }
             }
-        }
         }
     }
 
     @media (max-width: 1330px) {
         .cardsContainer {
-        .card {
-            h2 {
-            white-space: nowrap;
+            .card {
+                h2 {
+                    white-space: nowrap;
+                }
+                img {
+                    height: 100px;
+                    width: 100px;
+                }
             }
-            img {
-            height: 100px;
-            width: 100px;
-            }
-        }
         }
     }
 
@@ -59,14 +56,14 @@ const StyledTeam = styled.div`
         height: 100%;
 
         .cardsContainer {
-        width: 100%;
-
-        .card {
-            padding: 0;
-            margin: 0;
             width: 100%;
-            height: max-content;
-        }
+
+            .card {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: max-content;
+            }
         }
     }
 `;
@@ -148,45 +145,39 @@ const StyledCards = styled.div`
 }
 `;
 const Team = () => {
-    let token = localStorage.getItem('token')
+    let token = localStorage.getItem("token");
     const [loggedIn, setLoggedIn] = useState(false);
     return (
         <div>
-            <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
-        <StyledTeam>
-            <StyledHeader>
-                <div className="teamHeader">
-                    <h1>Meet the Team!</h1>
-                </div>
-            </StyledHeader>
-            <StyledCards className="cardsContainer">
-                <div className="card">
-                    <img className="card-photo" src={rick} alt="Rick Mansfield" />
-                    <h2>Rick Mansfield</h2>
-                    <p>Full Stack Developer</p>
-                </div>
-
-                <div className="card">
-                    <img className="card-photo" src={chris} alt="Jared Hall" />
-                    <h2>Chris Boyle</h2>
-                    <p>Full Stack Developer</p>
-                </div>
-
-                <div className="card">
-                    <img className="card-photo" src={teresa} alt="Teresa Franxman" />
-                    <h2>Teresa Franxman</h2>
-                    <p>Full Stack Developer</p>
-                </div>
-
-                <div className="card">
-                    <img className="card-photo" src={michael} alt="Michael Habermas" />
-                    <h2>Michael Habermas</h2>
-                    <p>Full Stack Developer</p>
-                </div>
-            </StyledCards>
+            <Header
+                loggedIn={loggedIn}
+                setLoggedIn={setLoggedIn}
+                token={token}
+            />
+            <StyledTeam>
+                <StyledHeader>
+                    <div className="teamHeader">
+                        <h1>Meet the Team!</h1>
+                    </div>
+                </StyledHeader>
+                <StyledCards className="cardsContainer">
+                    {teamMembers.map((member) => {
+                        return (
+                            <div className="card">
+                                <img
+                                    className="card-photo"
+                                    src={member.img}
+                                    alt={member.name}
+                                />
+                                <h2>{member.name}</h2>
+                                <p>{member.role}</p>
+                            </div>
+                        );
+                    })}
+                </StyledCards>
             </StyledTeam>
-            </div>
-    )
-}
+        </div>
+    );
+};
 
-export default Team
+export default Team;
