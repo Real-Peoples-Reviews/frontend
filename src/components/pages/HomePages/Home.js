@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from '../common/Header';
-import Footer from '../common/footer';
+import Header from '../../common/Header';
+import Footer from '../../common/footer';
 import Button from 'react-bootstrap/Button';
 
 const Home = () => {
