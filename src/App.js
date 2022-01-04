@@ -1,9 +1,8 @@
 import React from "react";
-import './App.css';
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./utils/Private.js";
 import Dashboard from "./components/pages/Dashboard";
-import Home from "./components/pages/Home";
+import Home from "./components/pages/HomePages/Home";
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import Team from "../src/components/pages/Team";
