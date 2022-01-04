@@ -48,3 +48,7 @@ We are working to convert RPR from PHP/Laravel to Javascript/React. If you are a
 ## Styling 
 - [React Boostrap](https://react-bootstrap.github.io/getting-started/introduction/)
 - [W3 on Bootstrap getting started](https://www.w3schools.com/bootstrap/bootstrap_get_started.asp)
+- [Devwares.com](https://www.devwares.com/) is CDB
+- __Free exports using CDB (Contrast Database for React-Bootstrap__
+  - (possible exports: CDBAccordion, CDBAlert, CDBAnimation, CDBBadge, CDBBox, CDBBreadcrumb, CDBBtn, CDBBtnGrp, CDBBtnTb, CDBCard, CDBCardBody, CDBCarousel, CDBCarouselInner, CDBCarouselItem, CDBCloseIcon, CDBCol, CDBCollapse, CDBContainer, CDBDataTable, CDBDropDown, CDBDropDownItem, CDBDropDownMenu, CDBDropDownToggle, CDBHamburgerToggler, CDBIframe, CDBInput, CDBInputGroup, CDBJumbotron, CDBLink, CDBListGroup, CDBListGroupItem, CDBMask, CDBModal, CDBModalBody, CDBModalFooter, CDBModalHeader, CDBNavBrand, CDBNavItem, CDBNavLink, CDBNavToggle, CDBNavbar, CDBNavbarNav, CDBPageItem, CDBPageLink, CDBPagination, CDBProgress, CDBRating, CDBRow, CDBSelect, CDBSidebar, CDBSidebarContent, CDBSidebarFooter, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem, CDBSlider, CDBSmoothScroll, CDBSpinner, CDBSwitch, CDBTable, CDBTableBody, CDBTableHeader, CDBView)
+)
