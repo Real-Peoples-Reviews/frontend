@@ -1,18 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import schema from "../../schemas/schema";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 const Login = () => {
+	let navigate = useNavigate();
 
 	return (
 		<Formik
 			validationSchema={schema}
 			onSubmit={(e) => {
+				navigate('/home')
 				console.log(e)
-
 			}}
 			initialValues={{
 				email: "",
@@ -29,7 +30,7 @@ const Login = () => {
 				errors,
 			}) => (
 				<div className="container space-2">
-					<Form onSubmit={handleSubmit} >
+					<Form onSubmit={handleSubmit}>
 						<Form.Group className="form-group">
 							<div className="heading">
 								<h2>
@@ -75,7 +76,7 @@ const Login = () => {
 								<Link to="/register">Sign Up</Link>
 							</div>
 							<div className="col-6 text-right">
-								<Button type="submit" variant="primary" className="btn"  >
+								<Button type="submit" variant="primary" className="btn">
 									Sign In
 								</Button>
 							</div>
