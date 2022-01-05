@@ -7,13 +7,14 @@ import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 import Team from "../src/components/pages/Team";
 import Logout from "./components/pages/Logout";
+import Landing from "../src/components/pages/Landing"
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path='/logout' element={<Logout />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Landing />} />
         <Route path='/home' element={<Home />} />
         <Route path='/team' element={<Team />} />
         <Route path='/dashboard' element={

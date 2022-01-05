@@ -48,3 +48,10 @@ We are working to convert RPR from PHP/Laravel to Javascript/React. If you are a
 ## Styling 
 - [React Boostrap](https://react-bootstrap.github.io/getting-started/introduction/)
 - [W3 on Bootstrap getting started](https://www.w3schools.com/bootstrap/bootstrap_get_started.asp)
+- [Devwares.com](https://www.devwares.com/) is CDB
+- [Documentation](https://www.devwares.com/docs/contrast/react/index)
+- __Examples of the Free exports using CDB (Contrast Database for React-Bootstrap__
+  - (possible exports: CDBAccordion, CDBAlert, CDBAnimation, CDBBadge, CDBBox, CDBBreadcrumb, CDBBtn, CDBBtnGrp, CDBBtnTb, CDBCard, CDBCardBody, CDBCarousel, CDBCarouselInner, CDBCarouselItem, CDBCloseIcon, CDBCol, CDBCollapse, CDBContainer, CDBDataTable, CDBDropDown, CDBDropDownItem, CDBDropDownMenu, CDBDropDownToggle, CDBHamburgerToggler, CDBIframe, CDBInput, CDBInputGroup, CDBJumbotron, CDBLink, CDBListGroup, CDBListGroupItem, CDBMask, CDBModal, CDBModalBody, CDBModalFooter, CDBModalHeader, CDBNavBrand, CDBNavItem, CDBNavLink, CDBNavToggle, CDBNavbar, CDBNavbarNav, CDBPageItem, CDBPageLink, CDBPagination, CDBProgress, CDBRating, CDBRow, CDBSelect, CDBSidebar, CDBSidebarContent, CDBSidebarFooter, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem, CDBSlider, CDBSmoothScroll, CDBSpinner, CDBSwitch, CDBTable, CDBTableBody, CDBTableHeader, CDBView)
+)
+- ___Remember We have access to the premium in addition to all those freebies above. check out more examples here https://cdbreact-demo.netlify.app/___
+- YOU MUST HAVE the cdbreact-pro-0.1.1.tgz folding in your root file for Devwares CDB (Contrast Database for React-Bootstrap) to function properly. 
