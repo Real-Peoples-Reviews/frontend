@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
+import axiosWithAuth from '../../utils/axiosWithAuth';
 import schema from "../../schemas/schema";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 const Login = () => {
 	let navigate = useNavigate();
+	const [credentials, setCredentials] = useState({});
 
 	return (
 		<Formik
 			validationSchema={schema}
 			onSubmit={(e) => {
-				navigate('/home')
-				console.log(e)
+				// navigate("/dashboard");
+				// console.log(e);
+				axiosWithAuth()
+					.post("/login", credentials)
+					.then((res) => {
+						console.log("response:", res.json);
+						
+						navigate("/dashboard");
+					})
+					.catch((err) => {
+						
+						console.log("Error:", err);
+					});
+
+				console.log(e);
 			}}
 			initialValues={{
 				email: "",
