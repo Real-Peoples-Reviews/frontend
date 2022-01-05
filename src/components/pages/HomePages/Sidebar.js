@@ -9,6 +9,7 @@ import {
 } from "cdbreact";
 
 import { NavLink } from "react-router-dom";
+import { Icon } from "../../common/SpinningIcons"
 
 const Sidebar = () => {
     return (
@@ -16,25 +17,25 @@ const Sidebar = () => {
             <CDBSidebar textColor="#fff" backgroundColor="#333">
                 <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
                     <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
-                        Sidebar
+                        Menu
                     </a>
                 </CDBSidebarHeader>
                 <CDBSidebarContent className="sidebar-content">
                     <CDBSidebarMenu>
                         <NavLink to="/" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="columns">About Us</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink to="/tables" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="table">Tables</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="table">How It Works</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink to="/profile" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="user">Features</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink to="/analytics" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="chart-line">Privacy Policy</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink to="/hero404" target="_blank" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="exclamation-circle">404 page</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="exclamation-circle">Terms & Conditions</CDBSidebarMenuItem>
                         </NavLink>
                     </CDBSidebarMenu>
                 </CDBSidebarContent>
@@ -46,6 +47,7 @@ const Sidebar = () => {
                     >
                         Sidebar Footer
                     </div>
+                    <Icon />
                 </CDBSidebarFooter>
             </CDBSidebar>
         </div>

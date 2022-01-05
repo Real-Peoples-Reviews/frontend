@@ -11,7 +11,6 @@ const Home = () => {
     return (
         <div>
             <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
-            {/* <p>HOME PAGE BEING UPDATED</p> */}
             <Sidebar />
             <Footer />
         </div>
