@@ -1,7 +1,7 @@
 import React from "react";
 import { CDBInput, CDBCheckbox, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBLink, CDBContainer } from "cdbreact";
 
-const Forms = () => {
+const Register = () => {
     return (
         <CDBContainer>
             <CDBCard style={{ width: "30rem" }}>
@@ -67,4 +67,4 @@ const Forms = () => {
         </CDBContainer>
     );
 };
-export default Forms;
+export default Register;
