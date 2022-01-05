@@ -59,9 +59,9 @@ const Signup = () => {
                             <CDBIcon fab icon="github" />
                         </CDBBtn>
                     </div>
-                    <p className="text-center m-0">Already have an account? <CDBLink className="d-inline p-0" to="#">Sign In</CDBLink></p>
+                    {/* <p className="text-center m-0">Already have an account? <CDBLink className="d-inline p-0" to="#">Sign In</CDBLink></p>
                     <hr />
-                    <p className="text-center">By clicking <em>Sign up</em> you agree to our <CDBLink className="d-inline p-0" to="#">terms of service</CDBLink></p>
+                    <p className="text-center">By clicking <em>Sign up</em> you agree to our <CDBLink className="d-inline p-0" to="#">terms of service</CDBLink></p> */}
                 </CDBCardBody>
             </CDBCard>
         </CDBContainer>
