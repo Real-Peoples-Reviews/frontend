@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
-import axiosWithAuth from '../../utils/axiosWithAuth';
+import axiosWithAuth from "../../utils/axiosWithAuth";
 import schema from "../../schemas/schema";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import {
+	CDBInput,
+	CDBCard,
+	CDBBtn,
+	CDBContainer,
+	CDBCardBody,
+	CDBIcon,
+} from "cdbreact";
 
 const Login = () => {
 	let navigate = useNavigate();
@@ -14,21 +21,18 @@ const Login = () => {
 		<Formik
 			validationSchema={schema}
 			onSubmit={(e) => {
-				// navigate("/dashboard");
-				// console.log(e);
 				axiosWithAuth()
 					.post("/login", credentials)
 					.then((res) => {
 						console.log("response:", res.json);
-						
+
 						navigate("/dashboard");
 					})
 					.catch((err) => {
-						
 						console.log("Error:", err);
 					});
 
-				console.log(e);
+				// console.log(e);
 			}}
 			initialValues={{
 				email: "",
@@ -44,60 +48,81 @@ const Login = () => {
 				isValid,
 				errors,
 			}) => (
-				<div className="container space-2">
-					<Form onSubmit={handleSubmit}>
-						<Form.Group className="form-group">
-							<div className="heading">
-								<h2>
-									Welome
-									<span> back </span>
-								</h2>
-								<p>Sign in to manage your account.</p>
-							</div>
-							<Form.Label>EMAIL ADDRESS</Form.Label>
-							<Form.Control
-								required
-								type="email"
-								name="email"
-								value={values.email}
-								onChange={handleChange}
-								isValid={touched.email && !errors.email}
-							/>
-						</Form.Group>
-						<Form.Group className="form-group">
-							<Form.Label>
-								<span>PASSWORD</span>
-							</Form.Label>
-							<Link to="/">
-								<span> Forgot your password? </span>
-							</Link>
-							<Form.Control
-								required
-								type="text"
-								name="password"
-								value={values.password}
-								onChange={handleChange}
-								isValid={touched.password && !errors.password}
-							/>
-						</Form.Group>
-						<Form.Group className="form-group">
-							<div className="custom-checkbox">
-								<Form.Check name="remember" label="Remember Me" />
-							</div>
-						</Form.Group>
-						<div className="mb-5">
-							<div className="col-6">
-								<span className="small text-muted">Don't have an account?</span>
-								<Link to="/register">Sign Up</Link>
-							</div>
-							<div className="col-6 text-right">
-								<Button type="submit" variant="primary" className="btn">
-									Sign In
-								</Button>
-							</div>
-						</div>
-					</Form>
-				</div>
+				<CDBContainer className="container space-2">
+					<CDBCard style={{ width: "30rem" }}>
+						<CDBCardBody className="mx-4">
+							<Form onSubmit={handleSubmit}>
+								<Form.Group className="form-group">
+									<div className="text-center mt-4 mb-2" id="heading">
+										<p className="h4">
+											Welome
+											<span> back </span>
+										</p>
+										<p>Sign in to manage your account.</p>
+									</div>
+									<Form.Control
+										required
+										type="email"
+										name="email"
+										placeholder="E-mail"
+										value={values.email}
+										onChange={handleChange}
+										isValid={touched.email && !errors.email}
+									/>
+								</Form.Group>
+
+								<Form.Group className="form-group">
+									<Form.Control
+										required
+										type="text"
+										name="password"
+										placeholder="Password"
+										value={values.password}
+										onChange={handleChange}
+										isValid={touched.password && !errors.password}
+									/>
+								</Form.Group>
+								<Form.Group className="form-group">
+									<div className="d-flex flex-wrap justify-content-center align-items-center">
+										<Form.Check name="remember" />
+										<p className="m-0">Remember me</p>
+										<Link to="/">Forgot Password?</Link>
+									</div>
+								</Form.Group>
+
+								<div className="mb-5">
+									<CDBBtn
+										type="submit"
+										color="dark"
+										className="btn-block my-3 mx-0"
+									>
+										Sign In
+									</CDBBtn>
+								</div>
+								<div>
+									<p className="text-center">
+										Not a member?
+										<Link className="d-inline p-0" to="/register">
+											Register
+										</Link>
+									</p>
+								</div>
+								<div>
+									<p className="text-center"> or sign in with</p>
+									<CDBBtn color="white" style={{ boxShadow: "none" }}>
+										<CDBIcon fab icon="facebook" />
+									</CDBBtn>
+									<CDBBtn color="white" style={{ boxShadow: "none" }}>
+										<CDBIcon fab icon="twitter" />
+									</CDBBtn>
+									<CDBBtn color="white" style={{ boxShadow: "none" }}>
+										<CDBIcon fab icon="google" />
+									</CDBBtn>
+								</div>
+							</Form>
+						</CDBCardBody>
+					</CDBCard>
+				</CDBContainer>
 			)}
 		</Formik>
 	);
