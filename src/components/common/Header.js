@@ -208,7 +208,6 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
                 Put Something Here and line 204
               </NavLink>
             ) : null}
-
             {!loggedIn ? (
               <NavLink
                 to="features"
@@ -247,7 +246,6 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
                 About Us
               </NavLink>
             ) : null}
-
             {loggedIn ? (
               <NavLink
                 // exact
@@ -273,7 +271,6 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
                 Login
               </NavLink>
             )}
-
             {!loggedIn ? (
               <NavLink
                 to="/signup"

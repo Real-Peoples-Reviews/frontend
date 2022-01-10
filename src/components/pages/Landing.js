@@ -26,6 +26,7 @@ const LandingStyle = styled.div`
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
+    text-align: left;
     margin: 5%;
   }
   .pricing_container {
@@ -35,6 +36,8 @@ const LandingStyle = styled.div`
   .pricing_card_container {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    border: 1px solid red;
   }
   .features_container {
     display: flex;
@@ -72,8 +75,6 @@ const Landing = () => {
           <div className="pricing_card_container">
             <div>card 1</div>
             <div>card 2</div>
-            <div>card 3</div>
-            <div>card 4</div>
           </div>
         </div>
 
