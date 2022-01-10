@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import axiosWithAuth from "../../utils/axiosWithAuth";
 import schema from "../../schemas/schema";
 import Form from "react-bootstrap/Form";
 import {
-	CDBInput,
 	CDBCard,
 	CDBBtn,
 	CDBContainer,
@@ -15,24 +14,20 @@ import {
 
 const Login = () => {
 	let navigate = useNavigate();
-	const [credentials, setCredentials] = useState({});
 
 	return (
 		<Formik
 			validationSchema={schema}
 			onSubmit={(e) => {
 				axiosWithAuth()
-					.post("/login", credentials)
+					.post("/users/login", e)
 					.then((res) => {
-						console.log("response:", res.json);
-
+						localStorage.setItem('token', res.data.token)
 						navigate("/dashboard");
 					})
 					.catch((err) => {
 						console.log("Error:", err);
 					});
-
-				// console.log(e);
 			}}
 			initialValues={{
 				email: "",
