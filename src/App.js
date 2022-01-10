@@ -4,10 +4,11 @@ import PrivateRoute from "./utils/Private.js";
 import Dashboard from "./components/pages/Dashboard";
 import Home from "./components/pages/HomePages/Home";
 import Login from './components/pages/Login';
-import Register from './components/pages/Register';
+import Signup from './components/pages/Signup';
 import Team from "../src/components/pages/Team";
 import Logout from "./components/pages/Logout";
-import Landing from "../src/components/pages/Landing"
+import Landing from "../src/components/pages/Landing";
+import Features from "../src/components/pages/HomePages/Features";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path='/home' element={<Home />} />
         <Route path='/team' element={<Team />} />
+        <Route path='/features' element={<Features/>} />
         <Route path='/dashboard' element={
           <PrivateRoute>
             <Dashboard />
@@ -24,7 +26,7 @@ function App() {
         }
         />
         <Route path='/login' element={<Login/>} />
-        <Route path='/register' element={<Register/>} />
+        <Route path='/signup' element={<Signup/>} />
       </Routes>
     </div>
   );
