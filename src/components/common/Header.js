@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
-import '../../css/index.css';
-import '../../css/App.css'
-
+import "../../css/index.css";
+import "../../css/App.css";
 
 const StyledHeader = styled.header`
   nav {
@@ -160,14 +159,10 @@ const StyledHeader = styled.header`
   }
 `;
 
-
 export default function Header({ loggedIn, setLoggedIn, token }) {
-
-
   const [navOpen, setNavOpen] = useState(false);
 
   const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
-
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 768);
@@ -180,143 +175,185 @@ export default function Header({ loggedIn, setLoggedIn, token }) {
   });
 
   useEffect(() => {
-    token !== null ? setLoggedIn(true) : setLoggedIn(false)
-  }, [setLoggedIn, token])
+    token !== null ? setLoggedIn(true) : setLoggedIn(false);
+  }, [setLoggedIn, token]);
 
   const toggleNav = () => {
     setNavOpen((prev) => !prev);
   };
 
   return (
-    <StyledHeader>
-      <nav className={navOpen && !isDesktop ? "nav-mobile-active" : null}>
-        <Link to="/" className="home-link">
-          <h2
-            onClick={() => {
-              setLoggedIn(false);
-            }}
-          >
-            Real Peoples Reviews{" "}
-          </h2>
-        </Link>
-
-        <div className="nav-links-container">
-          {loggedIn ? (
-            <NavLink
-              to="/"
-              activestyle={{
-                fontWeight: "bold",
-                color: "var(--white)",
-              }}
-            >
-              Put Something Here and line 204
-            </NavLink>
-          ) : null}
-
-          {loggedIn ? (
-            <NavLink
-              // exact
-              to="/logout"
-              activestyle={{
-                fontWeight: "bold",
-                color: "var(--white)",
-              }}
+    <>
+      <StyledHeader>
+        <nav className={navOpen && !isDesktop ? "nav-mobile-active" : null}>
+          <Link to="/" className="home-link">
+            <h2
               onClick={() => {
                 setLoggedIn(false);
               }}
             >
-              Logout
-            </NavLink>
-          ) : (
-            <NavLink
-              to="/login"
-              activestyle={{
-                fontWeight: "bold",
-                color: "var(--white)",
-              }}
-            >
-              Login
-            </NavLink>
-          )}
+              Real Peoples Reviews{" "}
+            </h2>
+          </Link>
 
-          {!loggedIn ? (
-            <NavLink
-              to="/signup"
-              activestyle={{
-                fontWeight: "bold",
-                color: "var(--white)",
-                border: "1px solid var(--white)",
-              }}
-            >
-              Sign Up
-            </NavLink>
-          ) : null}
-        </div>
+          <div className="nav-links-container">
+            {loggedIn ? (
+              <NavLink
+                to="/"
+                activestyle={{
+                  fontWeight: "bold",
+                  color: "var(--white)",
+                }}
+              >
+                Put Something Here and line 204
+              </NavLink>
+            ) : null}
 
-        <div onClick={toggleNav} className="mobile-nav-menu-btn">
-          <div>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
+            {!loggedIn ? (
+              <NavLink
+                to="features"
+                activestyle={{
+                  fontWeight: "bold",
+                  color: "var(--white)",
+                  border: "1px solid var(--white)",
+                }}
+              >
+                Features
+              </NavLink>
+            ) : null}
+
+            {!loggedIn ? (
+              <NavLink
+                to="/howitworks"
+                activestyle={{
+                  fontWeight: "bold",
+                  color: "var(--white)",
+                  border: "1px solid var(--white)",
+                }}
+              >
+                How it Works
+              </NavLink>
+            ) : null}
+
+            {!loggedIn ? (
+              <NavLink
+                to="/aboutus"
+                activestyle={{
+                  fontWeight: "bold",
+                  color: "var(--white)",
+                  border: "1px solid var(--white)",
+                }}
+              >
+                About Us
+              </NavLink>
+            ) : null}
+
+            {loggedIn ? (
+              <NavLink
+                // exact
+                to="/logout"
+                activestyle={{
+                  fontWeight: "bold",
+                  color: "var(--white)",
+                }}
+                onClick={() => {
+                  setLoggedIn(false);
+                }}
+              >
+                Logout
+              </NavLink>
+            ) : (
+              <NavLink
+                to="/login"
+                activestyle={{
+                  fontWeight: "bold",
+                  color: "var(--white)",
+                }}
+              >
+                Login
+              </NavLink>
+            )}
+
+            {!loggedIn ? (
+              <NavLink
+                to="/signup"
+                activestyle={{
+                  fontWeight: "bold",
+                  color: "var(--white)",
+                  border: "1px solid var(--white)",
+                }}
+              >
+                Sign Up
+              </NavLink>
+            ) : null}
           </div>
-        </div>
 
-        <div className="mobile-nav-links-container ">
-          {loggedIn ? (
-            <NavLink
-              onClick={toggleNav}
-              to="/"
-              activstyle={{
-                backgroundColor: "var(--black)",
-                color: "var(--white)",
-                fontWeight: "bold",
-              }}
-            >
-              Put Something here and line 266
-            </NavLink>
-          ) : null}
+          <div onClick={toggleNav} className="mobile-nav-menu-btn">
+            <div>
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </div>
+          </div>
 
-          {loggedIn ? (
-            <NavLink
-              to="/"
-              activestyle={{
-                backgroundColor: "var(--black)",
-                color: "var(--white)",
-                fontWeight: "bold",
-              }}
-              onClick={() => {
-                setLoggedIn(false);
-                toggleNav();
-              }}
-            >
-              Logout
-            </NavLink>
-          ) : (
-            <NavLink
-              to="/login"
-              activestyle={{
-                fontWeight: "bold",
-                color: "var(--white)",
-              }}
-            >
-              Login
-            </NavLink>
-          )}
-          {!loggedIn ? (
-            <NavLink
-              onClick={toggleNav}
-              to="/signup"
-              activestyle={{
-                backgroundColor: "var(--black)",
-                color: "var(--white)",
-                fontWeight: "bold",
-              }}
-            >
-              Sign Up
-            </NavLink>
-          ) : null}
-        </div>
-      </nav>
-    </StyledHeader>
+          <div className="mobile-nav-links-container ">
+            {loggedIn ? (
+              <NavLink
+                onClick={toggleNav}
+                to="/"
+                activstyle={{
+                  backgroundColor: "var(--black)",
+                  color: "var(--white)",
+                  fontWeight: "bold",
+                }}
+              >
+                Put Something here and line 266
+              </NavLink>
+            ) : null}
+
+            {loggedIn ? (
+              <NavLink
+                to="/"
+                activestyle={{
+                  backgroundColor: "var(--black)",
+                  color: "var(--white)",
+                  fontWeight: "bold",
+                }}
+                onClick={() => {
+                  setLoggedIn(false);
+                  toggleNav();
+                }}
+              >
+                Logout
+              </NavLink>
+            ) : (
+              <NavLink
+                to="/login"
+                activestyle={{
+                  fontWeight: "bold",
+                  color: "var(--white)",
+                }}
+              >
+                Login
+              </NavLink>
+            )}
+            {!loggedIn ? (
+              <NavLink
+                onClick={toggleNav}
+                to="/signup"
+                activestyle={{
+                  backgroundColor: "var(--black)",
+                  color: "var(--white)",
+                  fontWeight: "bold",
+                }}
+              >
+                Sign Up
+              </NavLink>
+            ) : null}
+          </div>
+        </nav>
+      </StyledHeader>
+      <Outlet />
+    </>
   );
 }
