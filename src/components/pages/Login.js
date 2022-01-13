@@ -97,7 +97,7 @@ const Login = () => {
 								<div>
 									<p className="text-center">
 										Not a member?
-										<Link className="d-inline p-0" to="/register">
+										<Link className="d-inline p-0" to="/signup">
 											Register
 										</Link>
 									</p>
