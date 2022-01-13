@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "../../css/index.css";
 import "../../css/App.css";
 import placeHolder from "../../assets/images/logos/Logo_1.PNG";
+import Header from "../common/Header";
 
 const LandingStyle = styled.div`
   .pic {
@@ -54,6 +55,7 @@ const LandingStyle = styled.div`
 const Landing = () => {
   return (
     <LandingStyle>
+      <Header />
       <div className="main_container">
         <div className="intro_container">
           <div className="intro_content">

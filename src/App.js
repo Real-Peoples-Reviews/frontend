@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./utils/Private.js";
-import Dashboard from "./components/pages/Dashboard";
 import Home from "./components/pages/HomePages/Home";
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
@@ -9,28 +8,28 @@ import Team from "../src/components/pages/Team";
 import Logout from "./components/pages/Logout";
 import Features from "./components/pages/HomePages/Features";
 import AboutUs from "./components/pages/HomePages/AboutUs";
-// import Landing from "../src/components/pages/Landing";
+import Landing from "../src/components/pages/Landing";
+import HowItWorks from "./components/pages/HomePages/HowItWorks";
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />}>
-          <Route path="features" element={<Features />} />
-          <Route path="aboutus" element={<AboutUs />} />
-          <Route path="howitworks" element={<AboutUs />} />
-        </Route>
-        <Route path="/logout" element={<Logout />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/howitworks" element={<HowItWorks />} />
+        <Route path="/features" element={<Features />} />
         <Route path="/team" element={<Team />} />
         <Route
-          path="/dashboard"
+          path="/home"
           element={
             <PrivateRoute>
-              <Dashboard />
+              <Home />
             </PrivateRoute>
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </div>
