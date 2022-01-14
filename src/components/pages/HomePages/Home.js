@@ -4,15 +4,15 @@ import Footer from "../../common/footer";
 import Dashboard from "../Dashboard";
 
 const Home = () => {
-  let token = localStorage.getItem("token");
-  const [loggedIn, setLoggedIn] = useState(false);
-  return (
-    <div>
-      <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
-      <Dashboard />
-      <Footer />
-    </div>
-  );
+    let token = localStorage.getItem("token");
+    const [loggedIn, setLoggedIn] = useState(false);
+    return (
+        <div>
+            <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} token={token} />
+            <Dashboard />
+            <Footer />
+        </div>
+    );
 };
 
 export default Home;

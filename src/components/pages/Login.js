@@ -5,11 +5,19 @@ import axiosWithAuth from "../../utils/axiosWithAuth";
 import schema from "../../schemas/schema";
 import Form from "react-bootstrap/Form";
 import { CDBCard, CDBBtn, CDBContainer, CDBCardBody, CDBIcon } from "cdbreact";
+import Header from "../common/Header";
+import Footer from "../common/footer";
+import Sidebar from "./HomePages/Sidebar";
+
 
 const Login = () => {
   let navigate = useNavigate();
 
   return (
+    <div>
+      <Header />
+      <div className="global-body">
+          <Sidebar />
     <Formik
       validationSchema={schema}
       onSubmit={(e) => {
@@ -36,7 +44,9 @@ const Login = () => {
         touched,
         isValid,
         errors,
-      }) => (
+        }) => (
+          <div>
+
         <CDBContainer className="container space-2">
           <CDBCard style={{ width: "30rem" }}>
             <CDBCardBody className="mx-4">
@@ -112,9 +122,15 @@ const Login = () => {
             </CDBCardBody>
           </CDBCard>
         </CDBContainer>
+        </div>
       )}
-    </Formik>
+        </Formik>
+        </div>
+      <Footer />
+      </div>
   );
 };
 
 export default Login;
+
+

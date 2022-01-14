@@ -1,4 +1,5 @@
 @import url("../../src/css/reset.css");
+@import url("../css/publicRoutes.css");
 
 /* Tablet breakpoint: 768px */
 /* Mobile breakpoint 480px */
@@ -19,6 +20,10 @@
 }
 
 /* Universal Styling */
+* {
+  box-sizing: border-box;
+  /* border: dashed; */
+}
 
 h1 {
   font-weight: 700;
