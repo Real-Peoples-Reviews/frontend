@@ -66,7 +66,7 @@ const Landing = () => {
               genuine reviews where you think matters most. Designed for Owners,
               Managers, Marketers, Social Media Experts, Sales Staff and more.
             </p>
-            <Link to="/register">Get Started Today</Link>
+            <Link to="/signup">Get Started Today</Link>
           </div>
           <div className="pic"></div>
         </div>
