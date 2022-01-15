@@ -10,6 +10,7 @@ import Features from "./components/pages/HomePages/Features";
 import AboutUs from "./components/pages/HomePages/AboutUs";
 import Landing from "../src/components/pages/Landing";
 import HowItWorks from "./components/pages/HomePages/HowItWorks";
+import Contact from "./components/pages/HomePages/Contact.js";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/howitworks" element={<HowItWorks />} />
         <Route path="/features" element={<Features />} />
+        <Route path="/contact" element={<Contact/>} />
         <Route path="/team" element={<Team />} />
         <Route
           path="/home"
