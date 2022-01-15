@@ -1,5 +1,5 @@
 import React from "react";
-import { CDBInput, CDBCheckbox, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBLink, CDBContainer } from "cdbreact";
+import { CDBInput, CDBCheckbox, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBContainer } from "cdbreact";
 
 const Signup = () => {
     return (
