@@ -10,6 +10,7 @@ import Features from "./components/pages/HomePages/Features";
 import AboutUs from "./components/pages/HomePages/AboutUs";
 import Landing from "../src/components/pages/Landing";
 import HowItWorks from "./components/pages/HomePages/HowItWorks";
+import PrivacyPolicy from "./components/pages/HomePages/Privacy.js";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/howitworks" element={<HowItWorks />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/features" element={<Features />} />
         <Route path="/team" element={<Team />} />
         <Route
