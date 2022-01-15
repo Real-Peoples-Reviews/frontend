@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import styled from "styled-components";
-// import "../../css/index.css";
-// import "../../css/App.css";
+
 
 const StyledHeader = styled.header`
   nav {
@@ -181,63 +180,34 @@ export default function Header() {
       <StyledHeader>
         <nav className={navOpen && !isDesktop ? "nav-mobile-active" : null}>
           <Link to="/" className="home-link">
-            <h2>Real Peoples Reviews </h2>
+            <h2>Real Peoples Reviews</h2>
           </Link>
 
           <div className="nav-links-container">
             <NavLink
-              to="/features"
-              className={{
-                fontWeight: "bold",
-                color: "var(--white)",
-                border: "1px solid var(--white)",
-              }}
-            >
-              Features
-            </NavLink>
-
-            <NavLink
               to="/howitworks"
-              className={{
+              activeclass={{
                 fontWeight: "bold",
                 color: "var(--white)",
                 border: "1px solid var(--white)",
               }}
             >
-              How it Works
-            </NavLink>
-
-            <NavLink
-              to="/aboutus"
-              className={{
-                fontWeight: "bold",
-                color: "var(--white)",
-                border: "1px solid var(--white)",
-              }}
-            >
-              About Us
+              How it Works & More
             </NavLink>
 
             <NavLink
               to="/login"
-              className={{
-                fontWeight: "bold",
-                color: "var(--white)",
-              }}
-            >
-              Login
-            </NavLink>
-
-            <NavLink
-              to="/signup"
-              className={{
+              activeclass={{
                 fontWeight: "bold",
                 color: "var(--white)",
                 border: "1px solid var(--white)",
               }}
             >
-              Sign Up
+              Login/Signup
             </NavLink>
+
+
+
           </div>
 
           <div onClick={toggleNav} className="mobile-nav-menu-btn">

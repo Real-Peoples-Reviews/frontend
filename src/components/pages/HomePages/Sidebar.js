@@ -22,20 +22,23 @@ const Sidebar = () => {
                 </CDBSidebarHeader>
                 <CDBSidebarContent className="sidebar-content">
                     <CDBSidebarMenu>
-                        <NavLink to="/" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="columns">About Us</CDBSidebarMenuItem>
+                        <NavLink to="/aboutus" activeclassname="activeClicked">
+                            <CDBSidebarMenuItem icon="address-card">About Us</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink to="/howitworks" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="table">How It Works</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="cogs">How It Works</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink to="/features" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="user">Features</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="heart">Features</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink to="/privacy" activeclassname="activeClicked">
-                            <CDBSidebarMenuItem icon="chart-line">Privacy Policy</CDBSidebarMenuItem>
+                            <CDBSidebarMenuItem icon="ban">Privacy Policy</CDBSidebarMenuItem>
                         </NavLink>
                         <NavLink to="/terms" target="_blank" activeclassname="activeClicked">
                             <CDBSidebarMenuItem icon="exclamation-circle">Terms & Conditions</CDBSidebarMenuItem>
+                        </NavLink>
+                        <NavLink to="/team" target="_blank" activeclassname="activeClicked">
+                            <CDBSidebarMenuItem icon="users">Meet Our Team</CDBSidebarMenuItem>
                         </NavLink>
                     </CDBSidebarMenu>
                 </CDBSidebarContent>
