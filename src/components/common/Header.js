@@ -186,7 +186,7 @@ export default function Header() {
           <div className="nav-links-container">
             <NavLink
               to="/howitworks"
-              activeClass={{
+              activeclass={{
                 fontWeight: "bold",
                 color: "var(--white)",
                 border: "1px solid var(--white)",
@@ -197,7 +197,7 @@ export default function Header() {
 
             <NavLink
               to="/login"
-              activeClass={{
+              activeclass={{
                 fontWeight: "bold",
                 color: "var(--white)",
                 border: "1px solid var(--white)",
@@ -206,8 +206,8 @@ export default function Header() {
               Login/Signup
             </NavLink>
 
-            
-            
+
+
           </div>
 
           <div onClick={toggleNav} className="mobile-nav-menu-btn">
