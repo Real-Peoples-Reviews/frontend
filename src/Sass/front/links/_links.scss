@@ -72,26 +72,26 @@
     border-color: $link-hover-color;
   }
 
-  &__toggle {
-    &-default {
-      display: inline-block;
-    }
+//   &__toggle {
+//     &-default {
+//       display: inline-block;
+//     }
 
-    &-toggled {
-      display: none;
-    }
-  }
+//     &-toggled {
+//       display: none;
+//     }
+//   }
 
-  &.toggled {
-    .link-muted__toggle-default {
-      display: none;
-    }
+//   &.toggled {
+//     .link-muted__toggle-default {
+//       display: none;
+//     }
 
-    .link-muted__toggle-toggled {
-      display: inline-block;
-    }
-  }
-}
+//     .link-muted__toggle-toggled {
+//       display: inline-block;
+//     }
+//   }
+// }
 
 /* Link White */
 .link-white {

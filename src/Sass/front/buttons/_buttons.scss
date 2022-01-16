@@ -51,24 +51,24 @@ label.btn {
 }
 
 /* Toggle */
-.btn {
-  &__toggle {
-    &-default {
-      display: inline-block;
-    }
+// .btn {
+//   &__toggle {
+//     &-default {
+//       display: inline-block;
+//     }
 
-    &-toggled {
-      display: none;
-    }
-  }
+//     &-toggled {
+//       display: none;
+//     }
+//   }
 
-  &.toggled {
-    .btn__toggle-default {
-      display: none;
-    }
+//   &.toggled {
+//     .btn__toggle-default {
+//       display: none;
+//     }
 
-    .btn__toggle-toggled {
-      display: inline-block;
-    }
-  }
-}
+//     .btn__toggle-toggled {
+//       display: inline-block;
+//     }
+//   }
+// }
