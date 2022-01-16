@@ -1,9 +1,9 @@
 import * as yup from "yup";
 
 const contactSchema = yup.object().shape({
-	name: yup.string().name().required(),
-	email: yup.string().email().required(),
-	message: yup.string().message().required(),
+	name: yup.string().required(),
+	email: yup.string().required(),
+	message: yup.string().required(),
 });
 
 export default contactSchema;
