@@ -8,8 +8,6 @@ import Header from "../common/Header";
 import Footer from "../common/footer";
 import Sidebar from "./HomePages/Sidebar";
 import axios from "axios"
-// import axiosWithAuth from "../../utils/axiosWithAuth";
-
 
 const Login = () => {
   let navigate = useNavigate();
@@ -22,9 +20,11 @@ const Login = () => {
         <Formik
           validationSchema={schema}
           onSubmit={(e) => {
-            axios()
+            console.log('ON SUBMIT', e);
+            axios
               .post("http://localhost:8000/users/login", e)
               .then((res) => {
+                console.log(res)
                 localStorage.setItem("token", res.data.token);
                 navigate("/home");
               })

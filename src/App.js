@@ -13,6 +13,7 @@ import HowItWorks from "./components/pages/HomePages/HowItWorks";
 import PrivacyPolicy from "./components/pages/HomePages/Privacy.js";
 
 function App() {
+  
   return (
     <div className="App">
       <Routes>
