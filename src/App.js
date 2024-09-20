@@ -11,6 +11,7 @@ import AboutUs from "./components/pages/HomePages/AboutUs";
 import Landing from "../src/components/pages/Landing";
 import HowItWorks from "./components/pages/HomePages/HowItWorks";
 import PrivacyPolicy from "./components/pages/HomePages/Privacy.js";
+import Terms from "./components/pages/HomePages/Terms.js";
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/features" element={<Features />} />
         <Route path="/team" element={<Team />} />
+        <Route path="/terms" element={<Terms />} />
         <Route
           path="/home"
           element={
