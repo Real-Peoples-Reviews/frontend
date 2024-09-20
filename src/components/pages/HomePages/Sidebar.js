@@ -48,7 +48,7 @@ const Sidebar = () => {
                             padding: '20px 5px',
                         }}
                     >
-                        Sidebar Footer
+                        Connect with us
                     </div>
                     <Icon />
                 </CDBSidebarFooter>
